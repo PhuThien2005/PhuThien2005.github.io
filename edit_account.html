@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh Sửa Tài Khoản - Hệ thống quản lý khách sạn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .edit-account-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="edit-account-container">
+        <h1>Chỉnh Sửa Tài Khoản</h1>
+        <form action="accounts.html" method="post">
+            <input type="text" name="username" placeholder="Tên đăng nhập" value="nhanvien123" required>
+            <input type="email" name="email" placeholder="Email" value="nhanvien@example.com" required>
+            <input type="text" name="phone" placeholder="Số điện thoại" value="0123456789" required>
+            <button class="btn" type="submit">Lưu Thay Đổi</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

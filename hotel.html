@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Khách sạn - Hệ thống quản lý khách sạn</title>
+    <style>
+        /* CSS chung cho các trang */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+            padding: 8px 16px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            flex: 1;
+            padding: 20px;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table,
+        th,
+        td {
+            border: 1px solid #ccc;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 8px 16px;
+            text-align: center;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .add-btn {
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Hệ thống quản lý khách sạn</h1>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Trang chủ</a>
+        <a href="hotel.html" class="active">Quản lý khách sạn</a>
+        <a href="employees.html">Quản lý nhân viên</a>
+        <a href="accounts.html">Quản lý tài khoản</a>
+        <a href="guests.html">Quản lý khách hàng</a>
+        <a href="rooms.html">Quản lý phòng</a>
+        <a href="roomtypes.html">Quản lý loại phòng</a>
+        <a href="services.html">Dịch vụ</a>
+        <a href="bookings.html">Đặt phòng</a>
+        <a href="payments.html">Thanh toán</a>
+        <a href="login.html">Đăng xuất</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>Quản lý Khách sạn</h1>
+            <a href="add_hotel.html" class="btn add-btn">Thêm khách sạn mới</a>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Khách sạn</th>
+                        <th>Tên Khách sạn</th>
+                        <th>Địa chỉ</th>
+                        <th>Số điện thoại</th>
+                        <th>Email</th>
+                        <th>Hành động</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Dữ liệu khách sạn sẽ được hiển thị ở đây -->
+                    <tr>
+                        <td>1</td>
+                        <td>Khách sạn A</td>
+                        <td>123 Đường ABC, Quận 1, TP.HCM</td>
+                        <td>0123456789</td>
+                        <td>hotela@gmail.com</td>
+                        <td>
+                            <a href="edit_hotel.html" class="btn">Sửa</a>
+                            <a href="#" class="btn">Xóa</a>
+                        </td>
+                    </tr>
+                    <!-- Thêm các dòng dữ liệu khác -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <footer style="text-align: center; padding: 10px; background-color: #333; color: white;">
+        &copy; 2024 Hệ thống quản lý khách sạn
+    </footer>
+
+</body>
+
+</html>

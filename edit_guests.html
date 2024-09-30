@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chỉnh Sửa Khách Hàng - Hệ thống quản lý khách sạn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .edit-guest-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="edit-guest-container">
+        <h1>Chỉnh Sửa Thông Tin Khách Hàng</h1>
+        <form action="guests.html" method="post">
+            <input type="text" name="guest_name" placeholder="Tên Khách" value="Nguyễn Văn A" required>
+            <input type="date" name="guest_birth" placeholder="Ngày Sinh" value="1990-01-01" required>
+            <input type="text" name="guest_phone" placeholder="Số Điện Thoại" value="0123456789" required>
+            <input type="email" name="guest_email" placeholder="Email" value="nguyenvana@example.com" required>
+            <input type="text" name="guest_address" placeholder="Địa Chỉ" value="Hà Nội" required>
+            <button class="btn" type="submit">Lưu Thay Đổi</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

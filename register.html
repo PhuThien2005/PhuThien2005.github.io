@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Đăng Ký - Hệ thống quản lý khách sạn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .register-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 400px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input[type="text"],
+        input[type="email"],
+        input[type="password"] {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .register-container p {
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .error {
+            color: red;
+            font-size: 0.9em;
+            margin-bottom: 10px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="register-container">
+        <h1>Đăng Ký</h1>
+        <form action="dashboard.html" method="post">
+            <input type="text" placeholder="Tên đăng nhập" name="username" required>
+            <input type="email" placeholder="Email" name="email" required>
+            <input type="password" placeholder="Mật khẩu" name="password" required>
+            <input type="password" placeholder="Xác nhận mật khẩu" name="confirm_password" required>
+            <div class="error" id="error-message"></div>
+            <button class="btn" type="submit">Đăng Ký</button>
+        </form>
+        <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+    </div>
+
+    <script>
+        const form = document.querySelector('form');
+        const errorMessage = document.getElementById('error-message');
+
+        form.addEventListener('submit', function (event) {
+            const password = form.password.value;
+            const confirmPassword = form.confirm_password.value;
+
+            if (password !== confirmPassword) {
+                event.preventDefault();  // Ngăn không cho form được gửi đi
+                errorMessage.textContent = 'Mật khẩu xác nhận không khớp.';
+            } else {
+                errorMessage.textContent = '';  // Xóa lỗi nếu không có lỗi
+            }
+        });
+    </script>
+
+</body>
+
+</html>

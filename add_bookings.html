@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thêm Đặt Phòng - Hệ thống quản lý khách sạn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .booking-form-container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 500px;
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+            color: #333;
+        }
+
+        input,
+        select {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+        }
+
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .booking-form-container p {
+            margin-top: 10px;
+            color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="booking-form-container">
+        <h1>Thêm Đặt Phòng Mới</h1>
+        <form action="bookings.html" method="post">
+            <select name="guest" required>
+                <option value="" disabled selected>Chọn Khách Hàng</option>
+                <option value="guest1">Nguyễn Văn A</option>
+                <option value="guest2">Trần Thị B</option>
+                <!-- Thêm các khách hàng khác -->
+            </select>
+
+            <select name="room" required>
+                <option value="" disabled selected>Chọn Phòng</option>
+                <option value="101">Phòng 101</option>
+                <option value="102">Phòng 102</option>
+                <!-- Thêm các phòng khác -->
+            </select>
+
+            <label for="checkin-date">Ngày Nhận Phòng:</label>
+            <input type="date" name="checkin_date" required>
+
+            <label for="checkout-date">Ngày Trả Phòng:</label>
+            <input type="date" name="checkout_date" required>
+
+            <select name="service">
+                <option value="" disabled selected>Chọn Dịch Vụ</option>
+                <option value="laundry">Giặt ủi</option>
+                <option value="massage">Massage</option>
+                <!-- Thêm các dịch vụ khác -->
+            </select>
+
+            <input type="text" placeholder="Tổng Tiền (VND)" name="total_price" required>
+
+            <button class="btn" type="submit">Thêm Đặt Phòng</button>
+        </form>
+    </div>
+
+</body>
+
+</html>

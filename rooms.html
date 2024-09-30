@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Phòng - Hệ thống quản lý khách sạn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Quản Lý Phòng</h1>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Trang chủ</a>
+        <a href="hotel.html">Quản lý khách sạn</a>
+        <a href="employees.html">Quản lý nhân viên</a>
+        <a href="accounts.html">Quản lý tài khoản</a>
+        <a href="rooms.html" class="active">Quản lý phòng</a>
+        <a href="services.html">Dịch vụ</a>
+        <a href="bookings.html">Đặt phòng</a>
+        <a href="payments.html">Thanh toán</a>
+        <a href="guests.html">Quản lý khách hàng</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>Danh Sách Phòng</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Phòng</th>
+                        <th>Số Phòng</th>
+                        <th>Tầng</th>
+                        <th>Loại Phòng</th>
+                        <th>Trạng Thái</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>101</td>
+                        <td>1</td>
+                        <td>Phòng Đơn</td>
+                        <td>Còn trống</td>
+                        <td>
+                            <a href="edit_room.html?id=1"><button class="btn">Chỉnh Sửa</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>102</td>
+                        <td>1</td>
+                        <td>Phòng Đôi</td>
+                        <td>Đã đặt</td>
+                        <td>
+                            <a href="edit_room.html?id=2"><button class="btn">Chỉnh Sửa</button></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+</body>
+
+</html>

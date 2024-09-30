@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Loại Phòng - Hệ thống quản lý khách sạn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Quản lý Loại Phòng</h1>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Trang chủ</a>
+        <a href="hotel.html">Quản lý khách sạn</a>
+        <a href="employees.html">Quản lý nhân viên</a>
+        <a href="accounts.html">Quản lý tài khoản</a>
+        <a href="guests.html">Quản lý khách hàng</a>
+        <a href="rooms.html">Quản lý phòng</a>
+        <a href="roomtypes.html" class="active">Quản lý loại phòng</a>
+        <a href="services.html">Dịch vụ</a>
+        <a href="bookings.html">Đặt phòng</a>
+        <a href="payments.html">Thanh toán</a>
+        <a href="login.html">Đăng xuất</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>Danh sách Loại Phòng</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Loại Phòng</th>
+                        <th>Tên Loại Phòng</th>
+                        <th>Giá</th>
+                        <th>Sức chứa</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Phòng Deluxe</td>
+                        <td>1,500,000 VND</td>
+                        <td>4 người</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Phòng Standard</td>
+                        <td>1,000,000 VND</td>
+                        <td>2 người</td>
+                    </tr>
+                    <!-- Thêm các loại phòng khác -->
+                </tbody>
+            </table>
+            <button class="btn">Thêm Loại Phòng</button>
+        </div>
+    </div>
+
+</body>
+
+</html>

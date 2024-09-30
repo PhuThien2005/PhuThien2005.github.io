@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản Lý Nhân Viên - Hệ thống quản lý khách sạn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .add-btn {
+            margin-top: 20px;
+            display: block;
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Quản Lý Nhân Viên</h1>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Trang chủ</a>
+        <a href="hotel.html">Quản lý khách sạn</a>
+        <a href="employees.html" class="active">Quản lý nhân viên</a>
+        <a href="accounts.html">Quản lý tài khoản</a>
+        <a href="rooms.html">Quản lý phòng</a>
+        <a href="services.html">Dịch vụ</a>
+        <a href="bookings.html">Đặt phòng</a>
+        <a href="payments.html">Thanh toán</a>
+        <a href="guests.html">Quản lý khách hàng</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>Danh Sách Nhân Viên</h1>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Nhân Viên</th>
+                        <th>Tên Nhân Viên</th>
+                        <th>Ngày Sinh</th>
+                        <th>Số Điện Thoại</th>
+                        <th>Email</th>
+                        <th>Chức Vụ</th>
+                        <th>Ngày Nhập</th>
+                        <th>Thao Tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>1990-01-01</td>
+                        <td>0123456789</td>
+                        <td>a@example.com</td>
+                        <td>Quản lý</td>
+                        <td>2022-01-01</td>
+                        <td>
+                            <a href="edit_employee.html?id=1"><button class="btn">Chỉnh Sửa</button></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Trần Thị B</td>
+                        <td>1995-05-05</td>
+                        <td>0987654321</td>
+                        <td>b@example.com</td>
+                        <td>Nhân viên</td>
+                        <td>2023-01-01</td>
+                        <td>
+                            <a href="edit_employee.html?id=2"><button class="btn">Chỉnh Sửa</button></a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <a href="add_employee.html" class="add-btn"><button class="btn">Thêm Nhân Viên</button></a>
+        </div>
+    </div>
+
+</body>
+
+</html>

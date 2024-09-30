@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quản lý Đặt Phòng - Hệ thống quản lý khách sạn</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+
+        header {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+        }
+
+        nav {
+            background-color: #444;
+            padding: 10px;
+            display: flex;
+            justify-content: space-around;
+        }
+
+        nav a {
+            color: white;
+            text-decoration: none;
+            padding: 8px 16px;
+        }
+
+        nav a:hover,
+        nav a.active {
+            background-color: #555;
+            border-radius: 5px;
+        }
+
+        .container {
+            padding: 20px;
+            flex: 1;
+        }
+
+        .content {
+            background-color: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h1 {
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        th,
+        td {
+            padding: 10px;
+            border: 1px solid #ddd;
+            text-align: left;
+        }
+
+        th {
+            background-color: #333;
+            color: white;
+        }
+
+        .btn {
+            background-color: #333;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .btn:hover {
+            background-color: #555;
+        }
+
+        .filter-container {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 20px;
+        }
+
+        .filter-container select,
+        .filter-container input {
+            padding: 8px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <h1>Quản lý Đặt Phòng</h1>
+    </header>
+
+    <nav>
+        <a href="dashboard.html">Trang chủ</a>
+        <a href="hotel.html">Quản lý khách sạn</a>
+        <a href="employees.html">Quản lý nhân viên</a>
+        <a href="accounts.html">Quản lý tài khoản</a>
+        <a href="guests.html">Quản lý khách hàng</a>
+        <a href="rooms.html">Quản lý phòng</a>
+        <a href="roomtypes.html">Quản lý loại phòng</a>
+        <a href="services.html">Dịch vụ</a>
+        <a href="bookings.html" class="active">Đặt phòng</a>
+        <a href="payments.html">Thanh toán</a>
+        <a href="login.html">Đăng xuất</a>
+    </nav>
+
+    <div class="container">
+        <div class="content">
+            <h1>Danh sách Đặt Phòng</h1>
+
+            <div class="filter-container">
+                <div>
+                    <label for="filter-guest">Khách Hàng:</label>
+                    <select id="filter-guest">
+                        <option value="all">Tất cả</option>
+                        <option value="guest1">Nguyễn Văn A</option>
+                        <option value="guest2">Trần Thị B</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="filter-date">Ngày Đặt:</label>
+                    <input type="date" id="filter-date">
+                </div>
+
+                <button class="btn">Lọc</button>
+            </div>
+
+            <table>
+                <thead>
+                    <tr>
+                        <th>ID Đặt Phòng</th>
+                        <th>Khách Hàng</th>
+                        <th>Phòng</th>
+                        <th>Ngày Nhận</th>
+                        <th>Ngày Trả</th>
+                        <th>Dịch Vụ</th>
+                        <th>Tổng Tiền</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>1</td>
+                        <td>Nguyễn Văn A</td>
+                        <td>101</td>
+                        <td>2023-09-30</td>
+                        <td>2023-10-05</td>
+                        <td>Giặt ủi</td>
+                        <td>5,000,000 VND</td>
+                    </tr>
+                    <tr>
+                        <td>2</td>
+                        <td>Trần Thị B</td>
+                        <td>102</td>
+                        <td>2023-10-01</td>
+                        <td>2023-10-03</td>
+                        <td>Massage</td>
+                        <td>7,000,000 VND</td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <a href="add_bookings.html"><button class="btn">Thêm Đặt Phòng</button></a>
+        </div>
+    </div>
+
+</body>
+
+</html>
