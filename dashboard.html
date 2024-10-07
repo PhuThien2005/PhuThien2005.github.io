@@ -2,6 +2,8 @@
 <html lang="vi">
 
 <head>
+    <!-- Thêm Font Awesome để sử dụng biểu tượng -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Trang Khách Sạn</title>
@@ -16,23 +18,89 @@
 
         /* Phần đầu trang: logo và Luxury Mường Thanh */
         .header {
+            display: flex;
+            /* Sử dụng Flexbox để căn chỉnh phần tử */
+            align-items: center;
+            /* Căn giữa theo trục dọc */
+            justify-content: flex-start;
+            /* Đưa các phần tử về phía trái */
             background-color: #333;
-            /* Màu xanh biển */
+            /* Màu nền */
             padding: 20px;
-            text-align: center;
         }
 
-        .header img {
+        .header img.logo {
+            margin-right: 20px;
+            /* Tạo khoảng cách giữa logo và tiêu đề */
             width: 100px;
             /* Kích thước logo */
         }
 
+        /* Container cho menu tài khoản */
+        .account-menu-container {
+            margin-left: auto;
+            position: relative;
+            display: inline-block;
+        }
+
+        /* Menu thả xuống */
+        .account-dropdown {
+            display: none;
+            position: absolute;
+            background-color: #333;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+            z-index: 9999;
+            /* Increase this value */
+            border-radius: 8px;
+            right: 0;
+        }
+
+
+        /* Các tùy chọn bên trong menu */
+        .account-dropdown ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .account-dropdown ul li {
+            padding: 10px 20px;
+            text-align: left;
+        }
+
+        .account-dropdown ul li a {
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+
+        .account-dropdown ul li a:hover {
+            background-color: #575757;
+            border-radius: 8px;
+        }
+
+        /* Hiển thị menu khi click vào biểu tượng */
+        .account-menu-container:hover .account-dropdown {
+            display: block;
+        }
+
+        /* Tăng kích thước biểu tượng tài khoản */
+        .account-icon {
+            font-size: 40px;
+            color: white;
+            cursor: pointer;
+        }
+
+
         .header h1 {
             color: white;
             /* Chữ màu trắng */
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
             font-size: 24px;
             margin: 0;
         }
+
 
         /* Chân trang */
         footer {
@@ -97,15 +165,15 @@
         /* Thanh điều hướng */
         nav {
             background-color: #555;
-            /* Đổi màu nền từ xanh nước biển sang xám đậm */
-            padding: 15px;
+
+            padding: 10px;
             display: flex;
             justify-content: space-around;
         }
 
         nav a {
             color: white;
-            /* Chữ màu trắng */
+
             text-decoration: none;
             padding: 10px;
         }
@@ -210,27 +278,41 @@
     <div class="header">
         <img src="https://booking.muongthanh.com/images/config/logo_1650360911.svg" alt="Logo khách sạn">
         <h1>Luxury Mường Thanh</h1>
+        <div class="account-menu-container">
+            <!-- Biểu tượng tài khoản -->
+            <a href="#" class="account-icon">
+                <i class="fas fa-user-circle"></i> <!-- Biểu tượng account -->
+            </a>
+
+            <!-- Menu thả xuống -->
+            <div class="account-dropdown">
+                <ul>
+                    <li><a href="accounts.html">Thông tin tài khoản</a></li>
+                    <li><a href="login.html">Đăng xuất</a></li>
+                </ul>
+            </div>
+        </div>
     </div>
 
 
     <!-- Thanh điều hướng -->
     <nav>
         <a href="dashboard.html" class="active">Trang chủ</a>
-        <a href="hotel.html">Quản lý khách sạn</a>
+
         <a href="employees.html">Quản lý nhân viên</a>
-        <a href="accounts.html">Quản lý tài khoản</a>
+
         <a href="guests.html">Quản lý khách hàng</a>
         <a href="rooms.html">Quản lý phòng</a>
         <a href="roomtypes.html">Quản lý loại phòng</a>
         <a href="services.html">Dịch vụ</a>
         <a href="bookings.html">Đặt phòng</a>
         <a href="payments.html">Thanh toán</a>
-        <a href="login.html">Đăng xuất</a>
+
     </nav>
 
     <!-- Nội dung trang chủ -->
     <div class="dashboard-content">
-        <h1>Chào mừng bạn đến với hệ thống quản lý khách sạn</h1>
+        <!-- <h1>Hệ thống quản lý khách sạn</h1> -->
 
         <div class="dashboard-sections">
             <!-- Phần thông báo -->

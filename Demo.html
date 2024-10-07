@@ -192,81 +192,6 @@
         }
 
         /* Nội dung */
-
-        .container {
-            padding: 20px;
-            flex: 1;
-        }
-
-        .content {
-            background-color: white;
-            padding: 20px;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 50%;
-            margin: 0 auto;
-        }
-
-        .account-info {
-            display: flex;
-            flex-direction: column;
-            gap: 15px;
-        }
-
-        .account-info div {
-            display: flex;
-            justify-content: space-between;
-        }
-
-        .btn {
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            margin-top: 20px;
-            display: block;
-            width: 100%;
-            text-align: center;
-        }
-
-        .btn:hover {
-            background-color: #555;
-        }
-
-        .change-password-section {
-            margin-top: 30px;
-        }
-
-        .change-password-section h2 {
-            color: #333;
-            margin-bottom: 10px;
-        }
-
-        .change-password-section input {
-            width: 100%;
-            padding: 10px;
-            margin: 8px 0;
-            box-sizing: border-box;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-        }
-
-        .change-password-section button {
-            margin-top: 20px;
-            background-color: #333;
-            color: white;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            width: 100%;
-        }
-
-        .change-password-section button:hover {
-            background-color: #555;
-        }
     </style>
 </head>
 
@@ -295,7 +220,7 @@
 
     <!-- Thanh điều hướng -->
     <nav>
-        <a href="dashboard.html">Trang chủ</a>
+        <a href="dashboard.html" class="active">Trang chủ</a>
         <a href="employees.html">Quản lý nhân viên</a>
         <a href="guests.html">Quản lý khách hàng</a>
         <a href="rooms.html">Quản lý phòng</a>
@@ -307,40 +232,6 @@
     </nav>
 
     <!-- NỘI DUNG TRANG WEB-->
-
-    <div class="container">
-        <div class="content">
-            <h1 style="color: #333">Thông Tin Tài Khoản</h1>
-
-            <div class="account-info">
-                <div>
-                    <span>Tên đăng nhập:</span>
-                    <span>nhanvien123</span>
-                </div>
-                <div>
-                    <span>Email:</span>
-                    <span>nhanvien@example.com</span>
-                </div>
-                <div>
-                    <span>Số điện thoại:</span>
-                    <span>0123456789</span>
-                </div>
-            </div>
-
-            <a href="edit_account.html"><button class="btn">Chỉnh Sửa Thông Tin</button></a>
-
-            <!-- Phần Đổi Mật Khẩu -->
-            <div class="change-password-section">
-                <h2>Đổi Mật Khẩu</h2>
-                <form action="change_password.php" method="post">
-                    <input type="password" name="current_password" placeholder="Mật khẩu hiện tại" required>
-                    <input type="password" name="new_password" placeholder="Mật khẩu mới" required>
-                    <input type="password" name="confirm_password" placeholder="Xác nhận mật khẩu mới" required>
-                    <button type="submit">Đổi Mật Khẩu</button>
-                </form>
-            </div>
-        </div>
-    </div>
 
 
     <!-- Phần chân trang -->
