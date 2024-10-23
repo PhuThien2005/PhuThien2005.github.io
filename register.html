@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Đăng Ký - Hệ thống quản lý khách sạn</title>
+    <title>Quên Mật Khẩu - Hệ thống quản lý khách sạn</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -15,7 +15,7 @@
             align-items: center;
         }
 
-        .register-container {
+        .reset-container {
             background-color: white;
             padding: 40px;
             border-radius: 10px;
@@ -29,8 +29,8 @@
             color: #333;
         }
 
-        input[type="text"],
         input[type="email"],
+        input[type="text"],
         input[type="password"] {
             width: 100%;
             padding: 10px;
@@ -54,7 +54,7 @@
             background-color: #555;
         }
 
-        .register-container p {
+        .reset-container p {
             margin-top: 10px;
             color: #555;
         }
@@ -69,17 +69,17 @@
 
 <body>
 
-    <div class="register-container">
-        <h1>Đăng Ký</h1>
-        <form action="dashboard.html" method="post">
-            <input type="text" placeholder="Tên đăng nhập" name="username" required>
-            <input type="email" placeholder="Email" name="email" required>
-            <input type="password" placeholder="Mật khẩu" name="password" required>
-            <input type="password" placeholder="Xác nhận mật khẩu" name="confirm_password" required>
+    <div class="reset-container">
+        <h1>Quên Mật Khẩu</h1>
+        <form action="reset_success.html" method="post">
+            <input type="email" placeholder="Nhập Email" name="email" required>
+            <input type="text" placeholder="Nhập Mã Kích Hoạt Nhân Viên" name="activation_code" required>
+            <input type="password" placeholder="Nhập Mật Khẩu Mới" name="new_password" required>
+            <input type="password" placeholder="Xác Nhận Mật Khẩu Mới" name="confirm_new_password" required>
             <div class="error" id="error-message"></div>
-            <button class="btn" type="submit">Đăng Ký</button>
+            <button class="btn" type="submit">Đặt Lại Mật Khẩu</button>
         </form>
-        <p>Đã có tài khoản? <a href="login.html">Đăng nhập</a></p>
+        <p>Bạn nhớ mật khẩu? <a href="login.html">Đăng nhập</a></p>
     </div>
 
     <script>
@@ -87,10 +87,10 @@
         const errorMessage = document.getElementById('error-message');
 
         form.addEventListener('submit', function (event) {
-            const password = form.password.value;
-            const confirmPassword = form.confirm_password.value;
+            const newPassword = form.new_password.value;
+            const confirmNewPassword = form.confirm_new_password.value;
 
-            if (password !== confirmPassword) {
+            if (newPassword !== confirmNewPassword) {
                 event.preventDefault();  // Ngăn không cho form được gửi đi
                 errorMessage.textContent = 'Mật khẩu xác nhận không khớp.';
             } else {
